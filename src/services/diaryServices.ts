@@ -10,8 +10,6 @@ export const findById = (id: number): DiaryEntry | undefined => {
     return entry
 }
 
-// get entries without sensitive info
-
 export const addDiary = (newDiaryEntry: NewDiaryEntry): DiaryEntry => {
     const newDiary = {
         id: Math.max( ... diaries.map(d => d.id)) + 1,

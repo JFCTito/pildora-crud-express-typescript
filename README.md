@@ -13,7 +13,6 @@ usar get
 usar post:
 plantilla:
 {
-"id": 1,
 "date": "30-05-2023",
 "weather": "rainy",
 "visibility": "poor",

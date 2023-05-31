@@ -31,7 +31,7 @@ const diaryServices = __importStar(require("../services/diaryServices"));
 const utils_1 = __importDefault(require("../utils"));
 const router = express_1.default.Router();
 router.get('/', (_req, res) => {
-    res.send('Fetching all entry diaries'); //get entry without sensitive info
+    res.send(diaryServices.getEntries());
 });
 router.get('/:id', (req, res) => {
     const diary = diaryServices.findById(+req.params.id);
@@ -39,21 +39,6 @@ router.get('/:id', (req, res) => {
         ? res.send(diary)
         : res.sendStatus(404);
 });
-/*
-router.post('/', (req, res) => {
-        const { date, weather, visibility, comment } = req.body
-    
-        const newDiaryEntry = diaryServices.addDiary(´{
-            date,
-            weather,
-            visibility,
-            comment
-        })
-    
-        res.json(newDiaryEntry)
-        
-})
- */
 router.post('/', (req, res) => {
     try {
         const newDiaryEntry = (0, utils_1.default)(req.body);
@@ -61,7 +46,7 @@ router.post('/', (req, res) => {
         res.json(addedDiaryEntry);
     }
     catch (e) {
-        res.status(400); /* .send(e.message) */
+        res.status(400);
     }
 });
 exports.default = router;

@@ -13,7 +13,6 @@ const findById = (id) => {
     return entry;
 };
 exports.findById = findById;
-// get entries without sensitive info
 const addDiary = (newDiaryEntry) => {
     const newDiary = Object.assign({ id: Math.max(...diaries.map(d => d.id)) + 1 }, newDiaryEntry);
     diaries.push(newDiary);
