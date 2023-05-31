@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "date": "30-05-2023",
+        "weather": "rainy",
+        "visibility": "poor",
+        "comment": "Pretty scary"
+    },
+    {
+        "id": 2,
+        "date": "20-05-2023",
+        "weather": "sunny",
+        "visibility": "good",
+        "comment": "Everything went well"
+    },
+    {
+        "id": 3,
+        "date": "10-05-2023",
+        "weather": "windy",
+        "visibility": "poor",
+        "comment": "Getting better"
+    },
+    {
+        "id": 4,
+        "date": "01-05-2023",
+        "weather": "cloudy",
+        "visibility": "good",
+        "comment": "I almost failed"
+    }
+]
